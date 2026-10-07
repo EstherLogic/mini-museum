@@ -1,0 +1,320 @@
+/* General */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f1ea;
+    color: #292929;
+    line-height: 1.6;
+}
+
+
+/* Header */
+
+header {
+    background-color: #242424;
+    color: white;
+    padding: 25px 8%;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 20px;
+    font-size: 36px;
+}
+
+
+/* Navigation */
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* Main */
+
+main {
+    width: 85%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    color: #6b4f35;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #4b3928;
+}
+
+
+/* Home */
+
+main > section:first-child {
+    text-align: center;
+}
+
+main > section:first-child img {
+    width: 180px;
+    max-width: 100%;
+    margin: 20px 0;
+}
+
+
+/* Articles */
+
+article {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+figure {
+    margin: 20px 0;
+}
+
+figure img {
+    max-width: 100%;
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+}
+
+figcaption {
+    font-style: italic;
+    margin-top: 8px;
+}
+
+
+/* Links */
+
+a {
+    color: #7b4f2c;
+}
+
+article a {
+    font-weight: bold;
+}
+
+
+/* Gallery */
+
+#vangogh,
+#monet,
+#picasso {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+#vangogh figure,
+#monet figure,
+#picasso figure {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    margin: 1%;
+}
+
+#vangogh figure img,
+#monet figure img,
+#picasso figure img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.2s;
+}
+
+#vangogh figure img:hover,
+#monet figure img:hover,
+#picasso figure img:hover {
+    transform: scale(1.03);
+}
+
+
+/* Popups */
+
+#popup1,
+#popup2,
+#popup3,
+#popup4,
+#popup5,
+#popup6,
+#popup7,
+#popup8,
+#popup9 {
+    display: none;
+}
+
+#popup1:target,
+#popup2:target,
+#popup3:target,
+#popup4:target,
+#popup5:target,
+#popup6:target,
+#popup7:target,
+#popup8:target,
+#popup9:target {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.9);
+
+    padding: 50px;
+    text-align: center;
+
+    z-index: 1000;
+}
+
+#popup1 img,
+#popup2 img,
+#popup3 img,
+#popup4 img,
+#popup5 img,
+#popup6 img,
+#popup7 img,
+#popup8 img,
+#popup9 img {
+    max-width: 80%;
+    max-height: 75vh;
+    width: auto;
+}
+
+#popup1 a,
+#popup2 a,
+#popup3 a,
+#popup4 a,
+#popup5 a,
+#popup6 a,
+#popup7 a,
+#popup8 a,
+#popup9 a {
+    display: block;
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+
+/* Visit */
+
+iframe {
+    max-width: 100%;
+    border: 0;
+    border-radius: 10px;
+}
+
+video {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+address {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    font-style: normal;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #242424;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+footer a {
+    color: white;
+}
+
+
+/* Responsive */
+
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main {
+        width: 92%;
+    }
+
+    #vangogh figure,
+    #monet figure,
+    #picasso figure {
+        display: block;
+        width: 100%;
+        margin: 20px 0;
+    }
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    margin-top: 25px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #242424;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f5f1ea;
+}
+
+tfoot {
+    font-style: italic;
+    text-align: center;
+}
